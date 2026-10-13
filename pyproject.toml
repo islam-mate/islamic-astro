@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "islamic-astro"
+version = "1.0.0"
+authors = [
+    { name = "Islamic Tech Community", email = "dev@islamictech.org" },
+]
+description = "Pure Python zero-dependency astronomical calculations for Islamic prayer times, Qibla direction, and solar positions."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Religion",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+islamic-astro = "islamic_astro.cli:main"
